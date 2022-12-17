@@ -1,5 +1,5 @@
 {
-  "name": "atomdb",
+  "name": "the.atom.db",
   "version": "1.0.0",
   "description": "Atom.db is an easy to learn and fast database that will help you locally store data without the need of creating accounts to create databases or having a lot of messy code, and keep it as clean and easy as possible.",
   "main": "index.js",
