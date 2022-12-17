@@ -20,7 +20,7 @@ function decrypt(key, string, iv) {
 module.exports = function(obj) {
   let ekey = obj.key;
   let e = obj.encrypt;
-  let path = obj.path;
+  let path = obj.path || 'atom.db';
   let data = {};
   let nno = obj.noNumberOverride || false;
   if(!fs.existsSync(path)) {
@@ -28,7 +28,7 @@ module.exports = function(obj) {
   } else {
     data = JSON.parse(fs.readFileSync(path)) || {};
   }
-  if(!ekey) {
+  if(!ekey && e == true) {
     console.log(chalk.red('Please, enter an encryption key, make sure it\'s a secret tho (we recommend you store it in a safe place though.)'));
     ekey = 'default';
   }
